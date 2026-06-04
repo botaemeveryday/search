@@ -1,0 +1,46 @@
+<div class="results-wrap">
+
+  <!-- Топбар -->
+  <header class="results-header">
+    <a href="{{ site.BaseURL }}" class="results-logo" aria-label="на главную">
+      <span class="logo-b-sm">b</span>ae
+    </a>
+    <div class="search-box search-box-sm" id="searchBoxResults">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input
+        type="text"
+        id="searchInputResults"
+        autocomplete="off"
+        autocorrect="off"
+        spellcheck="false"
+        aria-label="поиск"
+      />
+      <button class="search-clear hidden" id="searchClearResults" aria-label="очистить">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <button class="theme-toggle" id="themeToggleResults" aria-label="переключить тему">
+      <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </header>
+
+  <!-- Фильтры -->
+  <div class="results-filters" id="resultsFilters">
+    <button class="filter active" data-filter="all">все</button>
+    <button class="filter" data-filter="notes">конспекты</button>
+    <button class="filter" data-filter="github">github</button>
+    <button class="filter" data-filter="neerc">neerc</button>
+    <button class="filter" data-filter="wikipedia">wikipedia</button>
+  </div>
+
+  <!-- Мета -->
+  <div class="results-meta" id="resultsMeta"></div>
+
+  <!-- Список -->
+  <div class="results-list" id="resultsList"></div>
+
+  <!-- Пагинация -->
+  <div class="results-pagination" id="resultsPagination"></div>
+
+</div>

@@ -1,0 +1,21 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+
+{{ define "main" }}
+{{/*
+  Эти страницы не показываются пользователям напрямую —
+  они нужны только для того чтобы Pagefind их проиндексировал.
+  Реальный URL для пользователя хранится в .Params.url_original.
+*/}}
+<article data-pagefind-body>
+  <div data-pagefind-meta="title:{{ .Title }}"></div>
+  <div data-pagefind-meta="source:{{ .Params.source }}"></div>
+  <div data-pagefind-meta="url:{{ .Params.url_original }}"></div>
+
+  {{ range .Params.tags }}
+    <div data-pagefind-meta="tags:{{ . }}"></div>
+  {{ end }}
+
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</article>
+{{ end }}

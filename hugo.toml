@@ -1,0 +1,12 @@
+baseURL = "https://botaemeveryday.github.io/search/"
+languageCode = "ru"
+title = "botaemeveryday search"
+
+[params]
+  description = "поиск по открытым конспектам"
+
+[build]
+  writeStats = true
+
+[outputs]
+  home = ["HTML"]

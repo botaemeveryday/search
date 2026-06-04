@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ block "title" . }}{{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ site.Params.description }}" />
+
+  {{ $css := resources.Get "css/main.css" | resources.Minify }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+
+  <script>
+    // тема из localStorage, без мигания
+    (function () {
+      const t = localStorage.getItem('theme') || 'light';
+      document.documentElement.className = t;
+    })();
+  </script>
+</head>
+<body>
+  {{ block "main" . }}{{ end }}
+
+  {{ $js := resources.Get "js/search.js" | resources.Minify }}
+  <script src="{{ $js.RelPermalink }}"></script>
+
+  {{ block "pagefind" . }}{{ end }}
+</body>
+</html>
