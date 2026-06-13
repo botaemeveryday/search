@@ -1,4 +1,10 @@
-## Search
+<div align="center">
+    <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="banner-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="banner-light.svg">
+    <img alt="search banner" src="banner-light.svg">
+    </picture>
+</div>
 
 [![Hugo](https://img.shields.io/badge/Hugo-FF4088?style=flat-square&logo=hugo&logoColor=white)](https://gohugo.io/)
 [![Pagefind](https://img.shields.io/badge/Pagefind-2B6CB0?style=flat-square)](https://pagefind.app/)
